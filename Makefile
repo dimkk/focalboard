@@ -1,4 +1,4 @@
-.PHONY: prebuild clean cleanall ci server server-mac server-linux server-win server-linux-package generate watch-server webapp mac-app win-app-wpf linux-app
+.PHONY: prebuild clean cleanall ci server server-mac server-linux server-linux-armv7 server-win server-linux-package generate watch-server webapp mac-app win-app-wpf linux-app
 
 PACKAGE_FOLDER = focalboard
 
