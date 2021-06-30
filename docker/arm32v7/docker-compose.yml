@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  app:
+    build:
+      context: ./
+      network: host # this line is the trick
+    container_name: focalboard
+    ports:
+      - 80:8000
+    environment:
+      - VIRTUAL_HOST=focalboard.local
+      - VIRTUAL_PORT=8000
+

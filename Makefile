@@ -39,6 +39,11 @@ server-linux:
 	$(eval LDFLAGS += -X "github.com/mattermost/focalboard/server/model.Edition=linux")
 	cd server; env GOOS=linux GOARCH=amd64 go build -ldflags '$(LDFLAGS)' -o ../bin/linux/focalboard-server ./main
 
+server-linux-armv7:
+	mkdir -p bin/linux
+	$(eval LDFLAGS += -X "github.com/mattermost/focalboard/server/model.Edition=linux")
+	cd server; env GOOS=linux GOARCH=arm go build -ldflags '$(LDFLAGS)' -o ../bin/linux/focalboard-server ./main
+
 server-win:
 	$(eval LDFLAGS += -X "github.com/mattermost/focalboard/server/model.Edition=win")
 	cd server; env GOOS=windows GOARCH=amd64 go build -ldflags '$(LDFLAGS)' -o ../bin/win/focalboard-server.exe ./main
